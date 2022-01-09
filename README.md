@@ -1,19 +1,20 @@
 # Longform
 
-To start your Phoenix server:
+An app to experiment with multi-page forms made with Phoenix Framework
 
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.setup`
-  * Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
+Further reading
+https://www.w3.org/WAI/tutorials/forms/multi-page/#using-step-by-step-indicator
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+The app was created
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+- mix phx.new longform --live
 
-## Learn more
+Installed TailwindCSS with Forms plugin using the guide
 
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+https://pragmaticstudio.com/tutorials/adding-tailwind-css-to-phoenix
+
+To start your Phoenix server
+
+- Install dependencies with `mix deps.get`
+- Create and migrate your database with `mix ecto.setup`
+- Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
