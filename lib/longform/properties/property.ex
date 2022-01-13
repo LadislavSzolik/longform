@@ -14,25 +14,25 @@ defmodule Longform.Properties.Property do
   end
 
   @doc false
-  def changeset(property, attrs, part \\ :full) do
+  def changeset(property, attrs, part \\ :last) do
     property
     |> cast(attrs, [:type, :addr_str, :addr_nr, :addr_city, :addr_pc, :addr_cntry])
     |> validate_part(part)
   end
 
-  defp validate_part(changeset, :one) do
+  defp validate_part(changeset, :first) do
     changeset
     |> validate_required([:type])
   end
 
-  defp validate_part(changeset, :two) do
+  defp validate_part(changeset, :second) do
     changeset
-    |> validate_required([:addr_str, :addr_nr, :addr_city, :addr_pc, :addr_cntry])
+    |> validate_required([:addr_str])
   end
 
-  defp validate_part(changeset, :full) do
+  defp validate_part(changeset, :last) do
     changeset
-    |> validate_part(:one)
-    |> validate_part(:two)
+    |> validate_part(:first)
+    |> validate_required([:addr_str, :addr_nr, :addr_city, :addr_pc, :addr_cntry])
   end
 end

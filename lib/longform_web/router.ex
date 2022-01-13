@@ -20,7 +20,7 @@ defmodule LongformWeb.Router do
     get "/", PageController, :index
 
     live "/properties/", List
-    live "/properties/new", MultiPageForm
+    live "/properties/new", New
   end
 
   # Other scopes may use custom stacks.

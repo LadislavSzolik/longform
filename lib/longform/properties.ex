@@ -49,8 +49,8 @@ defmodule Longform.Properties do
       {:error, %Ecto.Changeset{}}
 
   """
-  def create_property(attrs \\ %{}) do
-    %Property{}
+  def create_property(%Property{} = property, attrs \\ %{}) do
+    property
     |> Property.changeset(attrs)
     |> Repo.insert()
   end
@@ -98,7 +98,7 @@ defmodule Longform.Properties do
       %Ecto.Changeset{data: %Property{}}
 
   """
-  def change_property(%Property{} = property, attrs \\ %{}, step \\ :full) do
+  def change_property(%Property{} = property, attrs \\ %{}, step \\ :last) do
     Property.changeset(property, attrs, step)
   end
 end

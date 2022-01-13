@@ -8,6 +8,9 @@
   button {
     @apply font-bold;
   }
+  a {
+    @apply font-bold underline;
+  }
 }
 
 /* Alerts and form errors used by phx.new */

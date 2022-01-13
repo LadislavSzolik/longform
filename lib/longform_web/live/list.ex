@@ -19,16 +19,9 @@ defmodule LongformWeb.List do
       <span><%= p.addr_nr %></span>
       <span><%= p.addr_pc %></span>
       <span><%= p.addr_str %></span>
-
     </div>
     <% end %>
-    <button phx-click="new">New</button>
+    <%= live_redirect "New", to: Routes.live_path(@socket, LongformWeb.New) %>
     """
-  end
-
-  def handle_event("new", _, socket) do
-    socket = push_redirect(socket, to: Routes.live_path(socket, LongformWeb.MultiPageForm))
-
-    {:noreply, socket}
   end
 end

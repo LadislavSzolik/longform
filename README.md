@@ -1,4 +1,4 @@
-# Longform
+# Longform - minimalistic first version
 
 An app to experiment with multi-page forms made with Phoenix Framework
 
