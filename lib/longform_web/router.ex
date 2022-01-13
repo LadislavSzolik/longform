@@ -19,6 +19,7 @@ defmodule LongformWeb.Router do
 
     get "/", PageController, :index
 
+    live "/properties/", List
     live "/properties/new", MultiPageForm
   end
 
